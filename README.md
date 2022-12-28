@@ -1,6 +1,7 @@
 # Maze_Run
 
 A game application entirely developed using the Game Boy Development Kit<br />
+
 Link to the Development Kit:<br />
 https://gbdev.io/<br />
 
