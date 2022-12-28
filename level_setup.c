@@ -6,6 +6,7 @@
 #include "Assets/MazeMap.c"
 #include "Configurations/transitions.c"
 #include "Assets/MazeSprites.c"
+#include "music.c"
 
 /** LEVEL ATTRIBUTES **/
 struct LevelFeatures {
@@ -133,11 +134,13 @@ UBYTE allow_player_move(UINT8 player_X, UINT8 player_Y, struct LevelFeatures *lv
    if (idx_TILE_TOP_LEFT==lvl->key_loc)
    {
       // collect the key
+      play_sound();
       set_bkg_tiles(lvl->key_coord[0], lvl->key_coord[1], 1, 1, reset_block[0]);
       result = 1;
    }
    else if (idx_TILE_TOP_LEFT==lvl->door_loc)
    {
+      play_sound();
       set_bkg_tiles(lvl->door_coord[0], lvl->door_coord[1], 1, 1, reset_block);
       level_complete();
    }
@@ -182,4 +185,3 @@ void player_control(UINT8 player_id, struct PlayerLocation *playerLoc, const str
    }
    performant_delay(5);
 }
-
