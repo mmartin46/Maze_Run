@@ -9,7 +9,7 @@
 void load_start_up()
 {
       // Main Screen
-   set_bkg_data(0, 242, main_screen_data);
+   set_bkg_data(0, 243, main_screen_data);
    set_bkg_tiles(0, 0, 20, 18, main_screen_map);
 
    SHOW_BKG;
