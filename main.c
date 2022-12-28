@@ -39,8 +39,6 @@ void main()
    reset_player(P1, &playerlocation);
 
 
-
-
    // Setting background flags.
    SHOW_SPRITES;
    SHOW_BKG;
