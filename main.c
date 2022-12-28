@@ -3,13 +3,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "level_setup.c"
+#include "Assets/main_screen_data.c"
+#include "Assets/main_screen_map.c"
 
+void load_start_up()
+{
+      // Main Screen
+   set_bkg_data(0, 242, main_screen_data);
+   set_bkg_tiles(0, 0, 20, 18, main_screen_map);
+
+   SHOW_BKG;
+   DISPLAY_ON;
+
+   // Pauses until the user presses start
+   waitpad(J_START);
+
+   fadeout();
+}
 
 void main()
 {
+   // Main Screen
+   load_start_up();
+
    // Setting up the level
    generate_level();
    set_level_attributes();
+   fadein();
 
    // Player Sprite
    set_sprite_data(0, 1, player);
