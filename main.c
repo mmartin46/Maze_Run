@@ -64,6 +64,9 @@ void main()
          case 2:
             player_control(P1, &playerlocation, &level_2);
             break;
+         case 3:
+            player_control(P1, &playerlocation, &level_3);
+            break;
          default:
             HIDE_SPRITES;
             fadeout();
