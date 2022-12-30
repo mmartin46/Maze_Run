@@ -17,8 +17,9 @@ struct LevelFeatures {
 };
 struct LevelFeatures level_1;
 struct LevelFeatures level_2;
+struct LevelFeatures level_3;
 
-unsigned char *levels[] = { maze_map, maze_map_two };
+unsigned char *levels[] = { maze_map, maze_map_two, maze_map_three };
 
 
 UINT8 level_num = 0;
@@ -81,11 +82,19 @@ void set_level_attributes()
    level_2.key_coord[1] = 5;
    level_2.door_coord[0] = 19;
    level_2.door_coord[1] = 16;
+
+   // Level 3 attributes
+   level_3.key_loc = 189;
+   level_3.door_loc = 358;
+   level_3.key_coord[0] = 9;
+   level_3.key_coord[1] = 9;
+   level_3.door_coord[0] = 18;
+   level_3.door_coord[1] = 18;
 }
 
 void level_complete()
 {
-   if (level_num < 2)
+   if (level_num < 3)
    {
       fadeout();
       HIDE_SPRITES;
@@ -187,3 +196,4 @@ void player_control(UINT8 player_id, struct PlayerLocation *playerLoc, const str
    }
    performant_delay(5);
 }
+
