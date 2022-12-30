@@ -30,4 +30,10 @@ extern unsigned char maze_map[];
 
 extern unsigned char maze_map_two[];
 
+#define maze_map_threeWidth 20
+#define maze_map_threeHeight 18
+#define maze_map_threeBank 0
+
+extern unsigned char maze_map_three[];
+
 /* End of MAZEMAP.H */
