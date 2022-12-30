@@ -48,7 +48,11 @@ void main()
    SHOW_SPRITES;
    SHOW_BKG;
    DISPLAY_ON;
-
+   
+   /*
+   Game Loop
+   switch(level_num) -> switches between levels.
+   */
    while (1)
    {
       if (joypad() & J_A)
