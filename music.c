@@ -1,5 +1,4 @@
 // Matthew 5:27
-
 #include <gb/gb.h>
 
 // Sets values for the registers
@@ -46,6 +45,4 @@ void play_sound()
    // (1=Sop output when length of NR41 expires)
    // 1100 0000, start sound, not continuous
    NR44_REG = 0xC0;
-
-   delay(1000);
 }
