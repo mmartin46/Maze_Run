@@ -143,7 +143,9 @@ UBYTE allow_player_move(UINT8 player_X, UINT8 player_Y, struct LevelFeatures *lv
    if (idx_TILE_TOP_LEFT==lvl->key_loc)
    {
       // collect the key
-      play_sound();
+      if (haskey == 0)
+         play_sound();
+         
       set_bkg_tiles(lvl->key_coord[0], lvl->key_coord[1], 1, 1, reset_block[0]);
       haskey = 1;
       result = 1;

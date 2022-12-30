@@ -33,7 +33,7 @@
 void performant_delay(UINT8 n)
 {
    UINT8 i;
-   for (i=0; i < n/2; i *= 4)
+   for (i=0; i < n; i++)
    {
       wait_vbl_done();
    }
