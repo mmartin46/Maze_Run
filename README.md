@@ -8,7 +8,8 @@ https://gbdev.io/<br />
 Tutorial Used:<br />
 https://www.youtube.com/watch?v=Zf53HX6_QHM&list=PLeEj4c2zF7PaFv5MPYhNAkBGrkx4iPGJo&index=11&ab_channel=GamingMonsters<br />
 
-
+Open the main.gb file on a Game Boy Emulator in order
+to play the game.
 
 [![logo.png](https://i.postimg.cc/L5bB73vr/logo.png)](https://postimg.cc/gL3ZLRCD)
 [![p0.png](https://i.postimg.cc/DZm67zmV/p0.png)](https://postimg.cc/KkSBNxnQ)<br />
