@@ -23,7 +23,7 @@ unsigned char *levels[] = { maze_map, maze_map_two };
 
 UINT8 level_num = 0;
 const char reset_block[1] = {0x00};
-
+UBYTE haskey;
 
 
 /** For debugging **/
@@ -136,13 +136,15 @@ UBYTE allow_player_move(UINT8 player_X, UINT8 player_Y, struct LevelFeatures *lv
       // collect the key
       play_sound();
       set_bkg_tiles(lvl->key_coord[0], lvl->key_coord[1], 1, 1, reset_block[0]);
+      haskey = 1;
       result = 1;
    }
-   else if (idx_TILE_TOP_LEFT==lvl->door_loc)
+   else if (idx_TILE_TOP_LEFT==lvl->door_loc && haskey)
    {
       play_sound();
       set_bkg_tiles(lvl->door_coord[0], lvl->door_coord[1], 1, 1, reset_block);
       level_complete();
+      haskey = 0;
    }
    return result;
 }
