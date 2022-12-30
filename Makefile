@@ -10,4 +10,4 @@ main:
 	$(CC) $(FLAGS) -c -o $(OBJ_FILE) $(C_FILE)
 	$(CC) $(FLAGS) -o $(GAME_FILE) $(OBJ_FILE)
 clean:
-	rm -f main.gb main.lst main.map main.sym
+	rm -f $(GAME_FILE) main.lst main.map main.sym
