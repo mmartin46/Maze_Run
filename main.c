@@ -55,19 +55,19 @@ void main()
       {
          debug = 1;
       }
-      if (level_num == 1)
+
+      switch (level_num)
       {
-         player_control(P1, &playerlocation, &level_1);
-      }
-      else if (level_num == 2)
-      {
-         player_control(P1, &playerlocation, &level_2);
-      }
-      else
-      {
-         HIDE_SPRITES;
-         fadeout();
-         printf("\n \n \n \n \n \n \n \n \n   YOU WON THE GAME!"); 
+         case 1:
+            player_control(P1, &playerlocation, &level_1);
+            break;
+         case 2:
+            player_control(P1, &playerlocation, &level_2);
+            break;
+         default:
+            HIDE_SPRITES;
+            fadeout();
+            printf("\n \n \n \n \n \n \n \n \n   YOU WON THE GAME!"); 
       }
    }
 }
