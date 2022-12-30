@@ -48,11 +48,7 @@ void main()
    SHOW_SPRITES;
    SHOW_BKG;
    DISPLAY_ON;
-   
-   /*
-   Game Loop
-   switch(level_num) -> switches between levels.
-   */
+
    while (1)
    {
       if (joypad() & J_A)
@@ -67,6 +63,9 @@ void main()
             break;
          case 2:
             player_control(P1, &playerlocation, &level_2);
+            break;
+         case 3:
+            player_control(P1, &playerlocation, &level_3);
             break;
          default:
             HIDE_SPRITES;
