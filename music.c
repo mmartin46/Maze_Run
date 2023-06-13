@@ -24,13 +24,13 @@ void play_sound()
 
    // Volume envelope
    // bit 7-4 - Intial volume of the envelope (0-0Fh) (0=No Sound)
-   // bit 3 - Envelope DIrection (0=Decrease, 1=Increase)
+   // bit 3 - Envelope Direction (0=Decrease, 1=Increase)
    // bit 2-0 - Number of envelope sweep (n: 0-7) (If zero, stop envelope operation.)
    // 1111 0001 is 0xF1, start at full volume, fade down, 1 envelope sweep (decimal)
    NR42_REG = 0xF1;
 
 
-   // bits 7-4 - Shif Clock Frequency (s)
+   // bits 7-4 - Shift Clock Frequency (s)
    // bit 3 - Counter Step/Width (0=15 bits, 1= bits)
    // bit 2-0 Dividing th ratio of frequencies (r)
    // 0011 0000 is 0x30, shift clock frequency 3, step 0, dividing ratio 0
